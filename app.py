@@ -23,3 +23,6 @@ def index():
         df_consolidado.to_excel(output_path, index=False)
         return send_file(output_path, as_attachment=True)
     return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
